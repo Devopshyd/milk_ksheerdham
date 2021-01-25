@@ -1,0 +1,13 @@
+<table border="2">
+    <tr><th colspan="2">Products added on {{ d }}</th></tr>
+    <tr>
+        <th>Name</th>
+        <th>Unit size</th>
+    </tr>
+    {% for x in r %}
+        <tr>
+            <td>{{ x.cart }}</td>
+            <td>{{ x.order_id }}</td>
+        </tr>
+    {% endfor %}
+</table>

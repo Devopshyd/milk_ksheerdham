@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+
+{% block title %} Delivery Boy {% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <h1>Your Order History: </h1>
+    <hr>
+
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">name</th>
+            <th scope="col">
+    username
+</th>
+            <th scope="col">    password</th>
+    <th scope="col">phone</th>
+    <th scope="col">address</th>
+              <th scope="col">email</th>
+              <th scope="col">vehicle_numberplate</th>
+    <th scope="col">Driving_liecense</th>
+              <th scope="col">vehicale_rc</th>
+    <th scope="col">Adarcard_number </th>
+              <th scope="col">Bank_account_No</th>
+    <th scope="col">ifsc_code</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for dlvrby in deliveryboy %}
+          <tr>
+            <td>{{ dlvrby.name }}</td>
+                      <td>{{ dlvrby.username }}</td>
+            <td>{{ dlvrby.password }}</td>
+              <td>{{ dlvrby.phone }}</td>
+                          <td>{{ dlvrby.email }}</td>
+
+            <td>{{ dlvrby.address }}</td>
+            <td>{{ dlvrby.vehicle_numberplate }}</td>
+            <td>{{ dlvrby.Driving_liecense }}</td>
+            <td>{{ dlvrby.vehicale_rc }}</td>
+            <td>{{ dlvrby.Adarcard_number }}</td>
+            <td>{{ dlvrby.Bank_account_No }}</td>
+            <td>{{ dlvrby.ifsc_code }}</td>
+
+          </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+</div>
+
+{% endblock %}

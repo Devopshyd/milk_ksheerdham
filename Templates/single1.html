@@ -1,0 +1,44 @@
+<table>
+    <tr><th>Product Details of {{pid}}</th></tr>
+    <tr><th>Total unit_sizes of {{pid}} -- {{ c }}</th></tr>
+</table>
+<table border="2">
+    <tr>
+        <th>#</th>
+       
+        <th>
+            Unit_sizes
+        </th>
+        <th>
+            Timstamp
+        </th>
+       
+    </tr>
+    {% for x,y in d %}
+    <tr>
+        <td>{{ forloop.counter }}</td>
+        <td>
+            {{ x }}
+        </td>
+
+        <td>
+            {{ y | date }}
+        </td>
+    </tr>
+    {% endfor %}
+    <tr>
+        <td>Total Units</td>
+       <td> {{ c }}</td> 
+    </tr>
+  
+   
+      
+   
+     
+      
+   
+   
+</table>
+  
+
+   

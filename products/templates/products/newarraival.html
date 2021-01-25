@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+
+		<div class="container">
+			<div class="row">
+				{% for prod in newarrvl %}
+				<div class="col-md-4">
+					<div class="card mb-4 shadow-sm">
+						<div class="embed-responsive embed-responsive-1by1">
+							<a href="{{ prod.get_absolute_url }}"><img alt="{{ prod.name }}"
+									class="card-img-top p-2 embed-responsive-item" src="{{ prod.Cover_Image.url }}" /></a>
+						</div>
+						<div class="card-body">
+							<h4><a style="color: black;" href="{{ prod.get_absolute_url }}">{{ prod.name }}</a></h4>
+							<p class="card-text">{{ prod.description|truncatewords:15 }}</p>
+							<p><b>Price:</b> ₹ {{ prod.price }}</p>
+							<div class="d-flex justify-content-between align-items-center">
+								<div class="btn-group">
+									<p><a class="btn btn-sm btn-outline-secondary" href="{{ prod.get_absolute_url }}" role="button">View Product</a></p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+{% endblock %}

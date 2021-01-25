@@ -1,0 +1,72 @@
+<hr>
+<table>
+    <tr>
+        <th>Driver_Name</th>
+        <th>Mobile_Number</th>
+        <th>Driver_License</th>
+        <th>Driver_Address</th>
+        <th>Driver_Salary</th>
+    </tr>
+    {% for x in drive %}
+    <tr>
+        <td>{{x.Driver_Name}}</td>
+        <td>{{x.Mobile_Number}}</td>
+        <td>{{x.Driver_License}}</td>
+        <td>{{x.Driver_Address}}</td>
+        <td>{{x.Driver_Salary}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<hr>
+<table>
+    <tr>
+        <th>Vehicle_Name</th>
+        <th>Vehicle_Number</th>
+    </tr>
+    {% for x in veh  %}
+    <tr>
+        <td>{{x.Vehicle_Name}}</td>
+        <td>{{x.Vehicle_Number}}</td>
+    </tr>
+    {% endfor %}
+</table>
+<hr>
+<table>
+    <tr>
+        <th>Employee_Name</th>
+        <th>Mobile_Number</th>
+        <th>Employee_Address</th>
+        <th>Employee_Salary</th>
+    </tr>
+    {% for x in emp %}
+    <tr>
+        <td>{{x.Employee_Name}}</td>
+        <td>{{x.Mobile_Number}}</td>
+        <td>{{x.Employee_Address}}</td>
+        <td>{{x.Employee_Salary}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<hr>
+
+<table>
+    <tr>
+        <th>Cow</th>
+        <th>Buffello</th>
+        <th>Cow_Milk</th>
+        <th>Buffello_Milk</th>
+        <th>Dhana</th>
+    </tr>
+    {% for x in farm %}
+    <tr>
+        <td>{{x.cow}}</td>
+        <td>{{x.buffello}}</td>
+        <td>{{x.cow_milk}}</td>
+        <td>{{x.buffello_milk}}</td>
+        <td>{{x.Dhana}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<hr>

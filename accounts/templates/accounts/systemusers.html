@@ -1,0 +1,24 @@
+
+
+{% block content %}
+
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="text-center form-group mb-4">
+            <h1 class="h2 mb-3 font-weight-normal">Admins Data</h1>
+        </div>
+        <div class="col-sm-5 col-12 form-group mx-auto">
+            <div class="form-group">
+                {% for user in admins %}
+                <label for="username">Username</label>
+                <h1><span>{{ user.username }}</span></h1>
+                <label for="username">Password</label>
+                <h1><span>{{ user.password }}</span></h1>
+
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+</div>
+{% endblock %}
